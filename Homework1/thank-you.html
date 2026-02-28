@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--
+  Name: Daniel Montanez
+  Course: MIS 3371 11290 - Transaction Processing Systems I
+  Assignment: Homework #1 - Hospital Registration Form
+  Description: Confirmation page after patient registration submission.
+  -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submission Received - MintCare Hospital</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Banner Section -->
+    <div id="banner">
+      <div id="banner-left">
+        <img id="logo" src="hospital-logo.png" alt="Hospital Logo" />
+      </div>
+
+      <div id="banner-center">
+        <h1 id="company-name">MintCare Hospital</h1>
+        <p id="today-date">Date: <span id="date"></span></p>
+      </div>
+
+      <div id="banner-right"></div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main">
+      <div class="form-card" style="text-align: center; padding: 60px 20px">
+        <h2>Thank You for Your Submission</h2>
+
+        <p>Your patient registration form has been successfully submitted.</p>
+
+        <p>
+          A representative from MintCare Hospital will contact you if additional
+          information is required.
+        </p>
+
+        <br />
+
+        <a href="patient-form.html">
+          <button type="button">Return to Registration Form</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer">
+      <p id="footer-addr">
+        MintCare Hospital<br />
+        2600 University Ave, Orange County, CA 92705<br />
+        (714) 456-7890
+      </p>
+
+      <div id="footer-actions">
+        <button type="button" id="contact-btn">Contact Us</button>
+
+        <a
+          class="socialLink"
+          href="https://www.facebook.com/MintCareHospital"
+          target="_blank"
+          >Facebook</a
+        >
+
+        <a
+          class="socialLink"
+          href="https://www.x.com/MintCareHospital"
+          target="_blank"
+          >X</a
+        >
+
+        <a
+          class="socialLink"
+          href="https://www.instagram.com/MintCareHospital"
+          target="_blank"
+          >Instagram</a
+        >
+      </div>
+    </div>
+
+    <!-- some JavaScript for dynamic date -->
+    <script>
+      const now = new Date();
+      const formatted = now.toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+      document.getElementById("date").textContent = formatted;
+    </script>
+  </body>
+</html>

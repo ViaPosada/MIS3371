@@ -1,0 +1,276 @@
+/*
+Name: Daniel Montanez
+Course: MIS 3371 11290 - Transaction Processing Systems I
+Assignment: Homework #1 - Hospital Registration Form
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef7f3;
+    color: #1f2a2a;
+    margin: 0;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 12px;
+}
+
+#banner {
+    display: flex;
+    align-items: center;
+    background-color: #cfeee3;
+    padding: 12px 16px;
+    border-bottom: 2px solid #9fd5c2;  
+}
+
+#banner-left {
+  width: 160px;
+  display: flex;
+  align-items: center;
+}
+
+#banner-center {
+  flex: 1;
+  text-align: center;
+}
+
+#banner-right {
+  width: 160px; 
+}
+
+#logo {
+  width: auto;
+  height: 200px;
+}
+
+#company-name {
+  font-size: 60px;
+  letter-spacing: 0.5px;
+}
+
+#today-date {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* ---------- Main Wrapper ---------- */
+#main {
+  max-width: 900px;
+  margin: 18px auto;
+  padding: 18px;
+  background-color: #ffffff;
+  border: 1px solid #cfd8d6;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+.label-cell {
+  width: 220px;
+  font-weight: bold;
+}
+
+
+input[name="first_name"],
+input[name="last_name"],
+input[name="email"] {
+  border: 1px solid #9fb8b0;
+}
+
+
+.input-box {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #a6c7bc;
+  border-radius: 6px;
+  background-color: #f6fffb;
+  box-sizing: border-box;
+}
+
+
+.input-box:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 2px solid #66bfa0;
+  background-color: #ffffff;
+}
+
+
+
+
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #a6c7bc;
+  border-radius: 6px;
+  background-color: #f6fffb;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #a6c7bc;
+  border-radius: 6px;
+  background-color: #f6fffb;
+  box-sizing: border-box;
+}
+
+#state {
+  width: 75px;
+}
+
+
+.help-text {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #4b5a58;
+}
+
+/* ---------- Footer ---------- */
+#footer {
+  margin-top: 24px;
+  padding: 14px 16px;
+  background-color: #cfeee3;
+  border-top: 2px solid #9fd5c2;
+  text-align: center;
+}
+
+#footer-address {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+}
+
+#footer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #66bfa0;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+/* Social links */
+.social-link {
+  text-decoration: none;
+  color: #1f2a2a;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background-color: #e9faf3;
+  border: 1px solid #9fd5c2;
+}
+
+.social-link:hover {
+  filter: brightness(0.96);
+}
+
+
+.form-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.form-table td {
+  padding: 10px 10px;
+  vertical-align: top;
+}
+
+
+.gap-cell {
+  width: 18px;
+}
+
+
+.section-row td {
+  padding-top: 28px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid #eef0f5;
+}
+
+.field.choice-group label {
+  margin: 10px 0;
+  display: block;
+}
+
+.choice-grid-table td {
+  padding: 10px 18px 10px 0; 
+}
+
+
+.choice-grid-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.choice-grid-table td {
+  padding: 6px 10px 6px 0;
+  vertical-align: middle;
+}
+
+
+
+
+.range-big {
+  width: 260px;
+  height: 18px;
+}
+
+
+.button-row-center {
+  text-align: center;
+  padding-top: 18px;
+}
+
+.button-row-center button {
+  min-width: 140px;
+  padding: 14px 22px;
+  font-size: 15px;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+
+.error-text {
+  color: #f3cf06;
+  font-size: 12px;
+  margin-top: 6px;
+  display: none;
+}

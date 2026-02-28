@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--
+    Name: Daniel Montanez
+    Course: MIS 3371 11290 - Transaction Processing Systems I
+    Assignment: Homework #1 - Hospital Registration Form
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Registration Form</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Banner Section -->
+    <div id="banner">
+      <div id="banner-left">
+        <img id="logo" src="hospital-logo.png" alt="Hospital Logo" />
+      </div>
+
+      <div id="banner-center">
+        <h1 id="company-name">MintCare Hospital</h1>
+        <p id="today-date">Date: <span id="date"></span></p>
+      </div>
+      "
+
+      <div id="banner-right"></div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main">
+
+      <form action="thank-you.html" onsubmit="return validatePasswords();">
+
+  <table class="form-table">
+
+    <!-- Patient Info -->
+    <tr class="section-row">
+      <td colspan="5"><p class="section-title">Patient Info</p></td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="field">
+          <label for="first_name">First Name</label>
+          <input class="input-box" type="text" id="first_name" name="first_name" maxlength="30" required>
+        </div>
+      </td>
+
+      <td class="gap-cell"></td>
+
+      <td>
+        <div class="field">
+          <label for="middleinit">Middle Initial</label>
+          <input class="input-box" type="text" id="middleinit" name="middleinit" maxlength="1" placeholder="M">
+        </div>
+      </td>
+
+      <td class="gap-cell"></td>
+
+      <td>
+        <div class="field">
+          <label for="last_name">Last Name</label>
+          <input class="input-box" type="text" id="last_name" name="last_name" maxlength="30" required>
+        </div>
+      </td>
+    </tr>
+
+
+    <!-- DOB + SSN -->
+    <tr>
+      <td colspan="2">
+        <div class="field">
+          <label for="dob">Date of Birth</label>
+          <input class="input-box" type="text" id="dob" name="dob"
+                 placeholder="MM/DD/YYYY"
+                 pattern="^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/[0-9]{4}$"
+                 required>
+          <div class="help-text">Format: MM/DD/YYYY</div>
+        </div>
+      </td>
+
+      <td class="gap-cell"></td>
+
+      <td colspan="2">
+        <div class="field">
+          <label for="ssn">Social Security Number</label>
+          <input class="input-box" type="password" id="ssn" name="ssn" maxlength="11" placeholder="123-45-6789" required>
+        </div>
+      </td>
+    </tr>
+
+
+    <!-- Email -->
+    <tr>
+      <td colspan="5">
+        <div class="field">
+          <label for="email">Email</label>
+          <input class="input-box" type="email" id="email" name="email" maxlength="50" required>
+        </div>
+      </td>
+    </tr>
+
+    <tr class="section-row">
+      <td colspan="5"><p class="section-title">Create Account</p></td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="field">
+          <label for="useid">Enter Desired User ID</label>
+          <input class="input-box" type="text" id="useid" name="useid" maxlength="20" required>
+          <div class="help-text">Max 20 characters</div>
+        </div>
+      </td>
+    </tr>
+
+
+    <tr>
+      <td colspan="2">
+        <div class="field">
+          <label for="password">Create Password</label>
+          <input class="input-box" type="password" id="password" name="password" minlength="8" required>
+          <div class="help-text">At least 8 characters (use a number + a letter)</div>
+        </div>
+      </td>
+
+      <td class="gap-cell"></td>
+
+      <td colspan="2">
+        <div class="field">
+          <label for="confirm_password">Retype Password</label>
+          <input class="input-box" type="password" id="confirm_password" name="confirm_password" minlength="8" required>
+          <div id="pwError" class="error-text">Passwords do not match.</div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Address -->
+    <tr class="section-row">
+      <td colspan="5"><p class="section-title">Address</p></td>
+    </tr>
+
+    <tr>
+      <td colspan="5">
+        <div class="field">
+          <label for="address1">Address Line 1</label>
+          <input class="input-box" type="text" id="address1" name="address1" maxlength="30" required>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="5">
+        <div class="field">
+          <label for="address2">Address Line 2</label>
+          <input class="input-box" type="text" id="address2" name="address2" maxlength="30">
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="field">
+          <label for="city">City</label>
+          <input class="input-box" type="text" id="city" name="city" maxlength="30" required>
+        </div>
+      </td>
+
+      <td class="gap-cell"></td>
+
+      <td>
+        <div class="field">
+          <label for="state">State</label>
+          <select id="state" name="state" required>
+            <option value="AL">AL</option>
+              <option value="AK">AK</option>
+              <option value="AZ">AZ</option>
+              <option value="AR">AR</option>
+              <option value="CA">CA</option>
+              <option value="CO">CO</option>
+              <option value="CT">CT</option>
+              <option value="DE">DE</option>
+              <option value="FL">FL</option>
+              <option value="GA">GA</option>
+              <option value="HI">HI</option>
+              <option value="ID">ID</option>
+              <option value="IL">IL</option>
+              <option value="IN">IN</option>
+              <option value="IA">IA</option>
+              <option value="KS">KS</option>
+              <option value="KY">KY</option>
+              <option value="LA">LA</option>
+              <option value="ME">ME</option>
+              <option value="MD">MD</option>
+              <option value="MA">MA</option>
+              <option value="MI">MI</option>
+              <option value="MN">MN</option>
+              <option value="MS">MS</option>
+              <option value="MO">MO</option>
+              <option value="MT">MT</option>
+              <option value="NE">NE</option>
+              <option value="NV">NV</option>
+              <option value="NH">NH</option>
+              <option value="NJ">NJ</option>
+              <option value="NM">NM</option>
+              <option value="NY">NY</option>
+              <option value="NC">NC</option>
+              <option value="ND">ND</option>
+              <option value="OH">OH</option>
+              <option value="OK">OK</option>
+              <option value="OR">OR</option>
+              <option value="PA">PA</option>
+              <option value="RI">RI</option>
+              <option value="SC">SC</option>
+              <option value="SD">SD</option>
+              <option value="TN">TN</option>
+              <option value="TX">TX</option>
+              <option value="UT">UT</option>
+              <option value="VT">VT</option>
+              <option value="VA">VA</option>
+              <option value="WA">WA</option>
+              <option value="WV">WV</option>
+              <option value="WI">WI</option>
+              <option value="WY">WY</option>
+          </select>
+        </div>
+      </td>
+
+      <td class="gap-cell"></td>
+
+      <td>
+        <div class="field">
+          <label for="zip">Zip</label>
+          <input class="input-box" type="text" id="zip" name="zip" maxlength="5" placeholder="77004" required>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Medical Section -->
+    <tr class="section-row">
+      <td colspan="5"><p class="section-title">Medical</p></td>
+    </tr>
+
+    <tr>
+      <td colspan="5">
+        <div class="field">
+          <label for="symptoms">Symptoms</label>
+          <textarea id="symptoms" name="symptoms" rows="3" cols="50" maxlength="150" required></textarea>
+          <div class="help-text">Max 150 characters</div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Prior conditions  -->
+    <tr>
+      <td colspan="5">
+        <div class="field">
+          <label>Prior Conditions (Optional)</label>
+
+          <table class="choice-grid-table">
+            <tr>
+              <td><label><input type="checkbox" name="prior_conditions" value="Diabetes"> Diabetes</label></td>
+              <td><label><input type="checkbox" name="prior_conditions" value="HighBloodPressure"> High Blood Pressure</label></td>
+              <td><label><input type="checkbox" name="prior_conditions" value="Asthma"> Asthma</label></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="prior_conditions" value="HeartDisease"> Heart Disease</label></td>
+              <td><label><input type="checkbox" name="prior_conditions" value="HighCholesterol"> High Cholesterol</label></td>
+              <td><label><input type="checkbox" name="prior_conditions" value="Arthritis"> Arthritis</label></td>
+            </tr>
+            <tr>
+              <td><label><input type="checkbox" name="prior_conditions" value="AnxietyDepression"> Anxiety/Depression</label></td>
+              <td><label><input type="checkbox" name="prior_conditions" value="SleepApnea"> Sleep Apnea</label></td>
+              <td><label><input type="checkbox" name="prior_conditions" value="None"> None</label></td>
+            </tr>
+          </table>
+
+        </div>
+      </td>
+    </tr>
+
+   
+    <tr>
+      <td colspan="2">
+        <div class="field choice-group">
+          <label>Gender</label>
+          <label><input type="radio" name="gender" value="M" required> Male</label>
+          <label><input type="radio" name="gender" value="F"> Female</label>
+          <label><input type="radio" name="gender" value="O"> Other</label>
+        </div>
+      </td>
+
+      <td class="gap-cell"></td>
+
+      <td colspan="2">
+        <div class="field choice-group">
+          <label>Vaccinated</label>
+          <label><input type="radio" name="vaccinated" value="1" required> Yes</label>
+          <label><input type="radio" name="vaccinated" value="0"> No</label>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Insurance -->
+    <tr>
+      <td colspan="5">
+        <div class="field choice-group">
+          <label>Insurance Type</label>
+          <label><input type="radio" name="insurance" value="PPO" required> PPO</label>
+          <label><input type="radio" name="insurance" value="HMO"> HMO</label>
+          <label><input type="radio" name="insurance" value="Medicare"> Medicare</label>
+          <label><input type="radio" name="insurance" value="None"> None</label>
+        </div>
+      </td>
+    </tr>
+
+   
+    <tr>
+      <td colspan="5">
+        <div class="field">
+          <label for="current_health">Current Health (1–10)</label>
+          <input class="range-big" type="range" id="current_health" name="current_health" min="1" max="10" value="5">
+          <div class="help-text">1 = worst, 10 = best</div>
+        </div>
+      </td>
+    </tr>
+
+    
+    <tr>
+      <td colspan="5" class="button-row-center">
+        <button type="reset">Clear</button>
+        <button type="submit">Submit</button>
+      </td>
+    </tr>
+
+  </table>
+</form>
+
+<script>
+  // password validation
+  function validatePasswords() {
+    const pw = document.getElementById("password").value;
+    const cpw = document.getElementById("confirm_password").value;
+    const err = document.getElementById("pwError");
+
+    if (pw !== cpw) {
+      err.style.display = "block";
+      return false; 
+    }
+    err.style.display = "none";
+    return true;
+  }
+</script>
+
+
+    <!-- Footer Section -->
+    <div id="footer">
+      <p id="footer-addr">
+        MintCare Hospital<br />
+        2600 University Ave, Orange County, CA 92705<br />
+        (714) 456-7890<br />
+      </p>
+
+      <div id="footer-actions">
+        <button type="button" id="contact-btn">Contact Us</button>
+
+      
+        <a
+          class="socialLink"
+          href="https://www.facebook.com/MintCareHospital"
+          target="_blank"
+          >Facebook</a
+        >
+        <a
+          class="socialLink"
+          href="https://www.x.com/MintCareHospital"
+          target="_blank"
+          >X</a
+        >
+        <a
+          class="socialLink"
+          href="https://www.instagram.com/MintCareHospital"
+          target="_blank"
+          >Instagram</a
+        >
+      </div>
+    </div>
+
+    <!-- some JavaScript for dynamic date -->
+    <script>
+      const now = new Date();
+      const formatted = now.toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+      document.getElementById("date").textContent = formatted;
+    </script>
+  </body>
+</html>
