@@ -49,7 +49,7 @@
                  maxlength="30" required
                  pattern="[A-Za-z'-]{1,30}" 
                  title="Enter 1 to 30 letters. Letters, apostrophes and dashes only"
-                 oninput="validateFirstName(); validateFields();">
+                 oninput="validateFirstName();">
           <div id="firstNameError" class="error-text">
             First name must be 1 to 30 characters only: Letters, apostrophes and dashes only
           </div>
@@ -65,7 +65,7 @@
                  maxlength="1" placeholder="M"
                   pattern="[A-Za-z]?"
                  title="1 letter or leave blank"
-                 oninput="validateMiddleInitial(); validateFields();">
+                 oninput="validateMiddleInitial();">
           <div id="middleInitError" class="error-text">
             Middle initial must be 1 letter or left blank
           </div>
@@ -81,7 +81,7 @@
                  maxlength="30" required
                   pattern="[A-Za-z'-]{1,30}"
                  title="Enter 1 to 30 letters. Letters, apostrophes and dashes only"
-                 oninput="validateLastName(); validateFields();">
+                 oninput="validateLastName();">
           <div id="lastNameError" class="error-text">
             Last name must be 1 to 30 characters only: Letters, apostrophes and dashes only
           </div>
@@ -113,7 +113,7 @@
                  maxlength="11" placeholder="123-45-6789" required
                  pattern="[0-9-]{9,11}"
                  title="Enter 9 digits"
-                 oninput="formatSSN(); validateSSN(); validateFields();">
+                 oninput="formatSSN(); validateSSN();">
           <div id="ssnError" class="error-text">SSN must be 9 digits</div>
         </div>
       </td>
@@ -126,7 +126,7 @@
           <input class="input-box" type="email" id="email" name="email" 
                  maxlength="50" required
                  title="Enter email in format name@domain.com"
-                 oninput="validateEmail(); validateFields();">
+                 oninput="validateEmail();">
           <div id="emailError" class="error-text">
             Enter a valid email address in the format name@domain.com
           </div>
@@ -143,7 +143,7 @@
                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                   required
                   title="Enter phone number in format 000-000-0000"
-                  oninput="validatePhone(); validateFields();">
+                  oninput="validatePhone();">
           <div id="phoneNumError" class="error-text">
             Enter a valid phone number in the format 000-000-0000
           </div>
@@ -160,7 +160,7 @@
         <div class="field">
           <label for="userid">Enter Desired User ID</label>
           <input class="input-box" type="text" id="userid" name="userid"
-                 oninput="lowercaseUserID(); validateUserID(); validateFields();" 
+                 oninput="lowercaseUserID(); validateUserID();" 
                  maxlength="20" required
                 pattern="[A-Za-z][A-Za-z0-9_-]{4,19}"
                  title="Enter 5 to 20 characters with no spaces. Must start with a letter">
@@ -181,7 +181,7 @@
                  minlength="8" maxlength="30" required
                  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#%^&*()\-_\+=\\/><\.,`~]).{8,30}"
                  title="Enter 8 to 30 characters. Must include at least one uppercase letter, lowercase letter, number, and one special character"
-                 oninput="validatePasswords(); validateFields();">
+                 oninput="validatePasswords();">
           <div class="help-text">
             8 to 30 characters with at least one uppercase letter, lowercase letter, number, 
             and special character
@@ -197,7 +197,8 @@
           <input class="input-box" type="password" id="confirm_password" name="confirm_password" 
                  minlength="8" maxlength="30" required
                  title="Re-enter your password to confirm"
-                  oninput="validatePasswords(); validateFields();">
+                  oninput="validatePasswords();">
+          <div id="pwError" class="error-text">Passwords do not match</div>        
           <div id="passwordError" class="error-text">
             Password cannot equal or have part of your user ID, first name, or last name
           </div>
@@ -218,7 +219,7 @@
                  maxlength="30" required
                  pattern=".{2,30}"
                  title="Enter street address (2 to 30 characters)"
-                 oninput="validateAddress1(); validateFields();">
+                 oninput="validateAddress1();">
           <div id="address1Error" class="error-text">Address Line 1 must be 2 to 30 characters</div>
         </div>
       </td>
@@ -232,7 +233,7 @@
                  maxlength="30"
                  pattern=".{2,30}"
                  title="Optional: Enter street address (2 to 30 characters)"
-                 oninput="validateAddress2(); validateFields();">
+                 oninput="validateAddress2();">
           <div id="address2Error" class="error-text">
             Address Line 2 must be 2 to 30 characters if entered
           </div>
@@ -248,7 +249,7 @@
                  maxlength="30" required
                  pattern=".{2,30}"
                  title="Enter city name (2 to 30 characters)"
-                 oninput="validateCity(); validateFields();">
+                 oninput="validateCity();">
           <div id="cityError" class="error-text">City must be 2 to 30 characters</div>
         </div>
       </td>
@@ -326,7 +327,7 @@
                  maxlength="10" placeholder="77004" required
                  pattern="[0-9]{5}"
                  title="Enter 5-digit zip code or zip+5 code (e.g. 77004 or 77004-1234)"
-                 oninput="validateZip(); validateFields();">
+                 oninput="validateZip();">
           <div id="zipError" class="error-text">Zip code must be 5 digits</div>
         </div>
       </td>
