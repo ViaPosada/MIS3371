@@ -1,0 +1,261 @@
+ /*
+Name: Daniel Montanez
+Course: MIS 3371 11290 - Transaction Processing Systems I 
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef7f3;
+    color: #1f2a2a;
+    margin: 0;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 12px;
+}
+
+#banner {
+    display: flex;
+    align-items: center;
+    background-color: #cfeee3;
+    padding: 6px 16px;
+    border-bottom: 2px solid #9fd5c2;  
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#banner-left {
+  width: 160px; 
+  display: flex;
+  align-items: center;
+}
+
+#banner-center {
+  flex: 1;
+  text-align: center;
+}
+
+#banner-right {
+  width: 160px; 
+}
+
+#logo {
+  width: 160px;
+  height: 100px;
+  object-fit: contain;
+}
+
+#company-name {
+  font-size: 30px;
+  letter-spacing: 0.5px;
+}
+
+#today-date,
+#welcome-message,
+#new-user-message {
+  margin-top: 4px 0;
+  font-size: 16px;
+}
+
+/* ---------- Main Wrapper ---------- */
+#main {
+  max-width: 900px;
+  width: 85%;
+  margin: 18px auto;
+  padding: 18px;
+  padding-bottom: 120px;
+  background-color: #ffffff;
+  border: 1px solid #cfd8d6;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+.label-cell {
+  width: 220px;
+  font-weight: bold;
+}
+
+input[name="first_name"],
+input[name="last_name"],
+input[name="email"] {
+  border: 1px solid #9fb8b0;
+}
+
+.input-box {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #a6c7bc;
+  border-radius: 6px;
+  background-color: #f6fffb;
+  box-sizing: border-box;
+}
+
+.input-box:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 2px solid #66bfa0;
+  background-color: #ffffff;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #a6c7bc;
+  border-radius: 6px;
+  background-color: #f6fffb;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #a6c7bc;
+  border-radius: 6px;
+  background-color: #f6fffb;
+  box-sizing: border-box;
+}
+
+.help-text {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #4b5a58;
+}
+
+/* ---------- Footer ---------- */
+#footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  background-color: #cfeee3;
+  border-top: 2px solid #9fd5c2;
+  text-align: center;
+  z-index: 1000;
+}
+
+#footer-address {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#footer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#footer button,
+#footer .social-link {
+  padding: 7px 10px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #66bfa0;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+.iframe-container {
+  max-width: 900px;
+  width: 85%;
+  margin: 16px auto;
+  padding: 12px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #cfd8d6;
+  border-radius: 10px;
+}
+
+.iframe-container h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.frame {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Social links */
+.social-link {
+  text-decoration: none;
+  color: #1f2a2a;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background-color: #e9faf3;
+  border: 1px solid #9fd5c2;
+}
+
+.social-link:hover {
+  filter: brightness(0.96);
+}
+
+.error-text {
+  display: none;
+  margin-top: 4px;
+  font-size: 12px;
+  color: rgb(255, 145, 0);
+  min-height: 16px;
+}
+
+#review-info {
+  display: none;
+  margin-top: 24px;
+  padding: 18px;
+  background-color: #ffffff;
+  border: 1px solid #cfd8d6;
+  border-radius: 10px;
+}
+
+#review-info h2 {
+  margin-top: 0;
+}
+
+.review-section {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.review-section:last-child {
+  border-bottom: none;
+}
+
+.review-section p {
+  margin: 8px 0;
+}
